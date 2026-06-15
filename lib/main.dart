@@ -11,7 +11,9 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = neutralLight;
+    final theme = MediaQuery.of(context).platformBrightness == Brightness.light
+        ? neutralLight
+        : neutralDark;
 
     /// Try changing this and hot reloading the application.
     ///
